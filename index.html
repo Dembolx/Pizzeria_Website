@@ -25,56 +25,6 @@
     <!-- Skrypty -->
     <script src="data.js"></script>
     <script src="script.js"></script>
-
-    <!-- Własne style CSS dla animacji -->
-    <style>
-      /* Animacja dla przycisków kategorii */
-      .category-btn {
-        transition: all 0.3s ease;
-      }
-      .category-btn:hover {
-        transform: scale(1.05);
-      }
-
-      /* Animacja dla kart menu */
-      .menu-item {
-        transition: all 0.3s ease;
-      }
-      .menu-item:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-      }
-
-      /* Animacja dla koszyka */
-      .cart-panel {
-        transition: transform 0.3s ease;
-      }
-      .cart-panel.active {
-        transform: translateX(0);
-      }
-      .cart-panel:not(.active) {
-        transform: translateX(100%);
-      }
-
-      /* Animacja dla przycisku "Add to Cart" */
-      .add-to-cart {
-        transition: all 0.3s ease;
-      }
-      .add-to-cart:hover {
-        transform: scale(1.05);
-      }
-
-      /* Animacja dla sekcji */
-      section {
-        opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 0.6s ease, transform 0.6s ease;
-      }
-      section.visible {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    </style>
   </head>
   <!-- Body -->
   <body class="bg-white min-h-screen">
@@ -82,14 +32,32 @@
       <div
         class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between"
       >
-        <h1 class="text-3xl font-['Pacifico'] text-primary animate__animated animate__fadeInDown">
+        <h1
+          class="text-3xl font-['Pacifico'] text-primary animate__animated animate__fadeInDown"
+        >
           La Bella
         </h1>
         <nav class="hidden md:flex items-center space-x-8">
-          <a href="#" class="text-gray-700 hover:text-primary animate__animated animate__fadeInDown">Home</a>
-          <a href="#menu" class="text-gray-700 hover:text-primary animate__animated animate__fadeInDown">Menu</a>
-          <a href="#about" class="text-gray-700 hover:text-primary animate__animated animate__fadeInDown">About</a>
-          <a href="#contact" class="text-gray-700 hover:text-primary animate__animated animate__fadeInDown">Contact</a>
+          <a
+            href="#"
+            class="text-gray-700 hover:text-primary animate__animated animate__fadeInDown"
+            >Home</a
+          >
+          <a
+            href="#menu"
+            class="text-gray-700 hover:text-primary animate__animated animate__fadeInDown"
+            >Menu</a
+          >
+          <a
+            href="#about"
+            class="text-gray-700 hover:text-primary animate__animated animate__fadeInDown"
+            >About</a
+          >
+          <a
+            href="#contact"
+            class="text-gray-700 hover:text-primary animate__animated animate__fadeInDown"
+            >Contact</a
+          >
           <button
             id="cartBtn"
             class="relative w-10 h-10 flex items-center justify-center animate__animated animate__fadeInDown"
@@ -102,7 +70,9 @@
             >
           </button>
         </nav>
-        <button class="md:hidden w-10 h-10 flex items-center justify-center animate__animated animate__fadeInDown">
+        <button
+          class="md:hidden w-10 h-10 flex items-center justify-center animate__animated animate__fadeInDown"
+        >
           <i class="ri-menu-line text-xl"></i>
         </button>
       </div>
@@ -122,17 +92,20 @@
               Experience the true taste of Italy with our handcrafted pizzas and
               traditional recipes passed down through generations.
             </p>
-            <button
+            <a
+              href="#menu"
               class="bg-primary text-white px-8 py-3 !rounded-button text-lg font-semibold hover:bg-opacity-90 animate__animated animate__pulse animate__infinite"
             >
               Order Now
-            </button>
+            </a>
           </div>
         </div>
       </section>
       <section id="menu" class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
-          <h2 class="text-3xl font-bold text-center mb-12 animate__animated animate__fadeIn">
+          <h2
+            class="text-3xl font-bold text-center mb-12 animate__animated animate__fadeIn"
+          >
             Our Menu
           </h2>
           <div class="flex overflow-x-auto pb-4 mb-8 gap-4">
@@ -183,11 +156,15 @@
       </section>
       <section id="about" class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
-          <h2 class="text-3xl font-bold text-center mb-12 animate__animated animate__fadeIn">
+          <h2
+            class="text-3xl font-bold text-center mb-12 animate__animated animate__fadeIn"
+          >
             About La Bella
           </h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div class="relative h-[400px] animate__animated animate__fadeInLeft">
+            <div
+              class="relative h-[400px] animate__animated animate__fadeInLeft"
+            >
               <img
                 src="https://public.readdy.ai/ai/img_res/a8861e63224e2ccdf03f9da9c17645b8.jpg"
                 class="w-full h-full object-cover rounded-lg"
@@ -229,32 +206,42 @@
       </section>
       <section id="gallery" class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
-          <h2 class="text-3xl font-bold text-center mb-12 animate__animated animate__fadeIn">
+          <h2
+            class="text-3xl font-bold text-center mb-12 animate__animated animate__fadeIn"
+          >
             Our Gallery
           </h2>
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="relative aspect-[4/3] lg:col-span-2 animate__animated animate__fadeInUp">
+            <div
+              class="relative aspect-[4/3] lg:col-span-2 animate__animated animate__fadeInUp"
+            >
               <img
                 src="https://public.readdy.ai/ai/img_res/afca11f8c302c571989197e8db031240.jpg"
                 alt="Restaurant Interior"
                 class="w-full h-full object-cover rounded-lg"
               />
             </div>
-            <div class="relative aspect-[3/4] animate__animated animate__fadeInUp">
+            <div
+              class="relative aspect-[3/4] animate__animated animate__fadeInUp"
+            >
               <img
                 src="https://public.readdy.ai/ai/img_res/1b59bccaf2f1602bc5f0c0cfaeae32b3.jpg"
                 alt="Seafood Dish"
                 class="w-full h-full object-cover rounded-lg"
               />
             </div>
-            <div class="relative aspect-[3/4] animate__animated animate__fadeInUp">
+            <div
+              class="relative aspect-[3/4] animate__animated animate__fadeInUp"
+            >
               <img
                 src="https://public.readdy.ai/ai/img_res/ad2e87bb9d07b986006599191ed3af97.jpg"
                 alt="Chef Making Pasta"
                 class="w-full h-full object-cover rounded-lg"
               />
             </div>
-            <div class="relative aspect-[4/3] lg:col-span-2 animate__animated animate__fadeInUp">
+            <div
+              class="relative aspect-[4/3] lg:col-span-2 animate__animated animate__fadeInUp"
+            >
               <img
                 src="https://public.readdy.ai/ai/img_res/0f765025f088f255dec912872285f586.jpg"
                 alt="Italian Desserts"
@@ -266,7 +253,9 @@
       </section>
       <section id="contact" class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
-          <h2 class="text-3xl font-bold text-center mb-12 animate__animated animate__fadeIn">
+          <h2
+            class="text-3xl font-bold text-center mb-12 animate__animated animate__fadeIn"
+          >
             Contact Us
           </h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -274,7 +263,9 @@
               <div class="bg-white rounded-lg shadow-sm p-8">
                 <form id="contactForm" class="space-y-6">
                   <div>
-                    <label class="block text-gray-700 mb-2" for="name">Name</label>
+                    <label class="block text-gray-700 mb-2" for="name"
+                      >Name</label
+                    >
                     <input
                       type="text"
                       id="name"
@@ -283,7 +274,9 @@
                     />
                   </div>
                   <div>
-                    <label class="block text-gray-700 mb-2" for="email">Email</label>
+                    <label class="block text-gray-700 mb-2" for="email"
+                      >Email</label
+                    >
                     <input
                       type="email"
                       id="email"
@@ -292,7 +285,9 @@
                     />
                   </div>
                   <div>
-                    <label class="block text-gray-700 mb-2" for="message">Message</label>
+                    <label class="block text-gray-700 mb-2" for="message"
+                      >Message</label
+                    >
                     <textarea
                       id="message"
                       rows="4"
